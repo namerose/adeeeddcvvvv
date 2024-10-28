@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Import theme styles */
+@import './styles/theme-patterns.css';
+@import './styles/theme-gradients.css';
+
+/* Theme Color Classes */
+.default-theme {
+  --theme-primary: theme(colors.neutral.900);
+  --theme-secondary: theme(colors.neutral.100);
+  --theme-accent: theme(colors.neutral.200);
+  --theme-background: theme(colors.white);
+}
+
+.blue-theme {
+  --theme-primary: theme(colors.blue.600);
+  --theme-secondary: theme(colors.blue.100);
+  --theme-accent: theme(colors.blue.200);
+  --theme-background: theme(colors.blue.50);
+}
+
+.green-theme {
+  --theme-primary: theme(colors.emerald.600);
+  --theme-secondary: theme(colors.emerald.100);
+  --theme-accent: theme(colors.emerald.200);
+  --theme-background: theme(colors.emerald.50);
+}
+
+.purple-theme {
+  --theme-primary: theme(colors.violet.600);
+  --theme-secondary: theme(colors.violet.100);
+  --theme-accent: theme(colors.violet.200);
+  --theme-background: theme(colors.violet.50);
+}
+
+.rose-theme {
+  --theme-primary: theme(colors.rose.600);
+  --theme-secondary: theme(colors.rose.100);
+  --theme-accent: theme(colors.rose.200);
+  --theme-background: theme(colors.rose.50);
+}
+
+.orange-theme {
+  --theme-primary: theme(colors.orange.600);
+  --theme-secondary: theme(colors.orange.100);
+  --theme-accent: theme(colors.orange.200);
+  --theme-background: theme(colors.orange.50);
+}
+
+/* Dark Mode */
+.dark .default-theme {
+  --theme-primary: theme(colors.neutral.100);
+  --theme-secondary: theme(colors.neutral.900);
+  --theme-accent: theme(colors.neutral.800);
+  --theme-background: theme(colors.black);
+}
+
+.dark .blue-theme {
+  --theme-primary: theme(colors.blue.400);
+  --theme-secondary: theme(colors.blue.900);
+  --theme-accent: theme(colors.blue.800);
+  --theme-background: theme(colors.blue.950);
+}
+
+.dark .green-theme {
+  --theme-primary: theme(colors.emerald.400);
+  --theme-secondary: theme(colors.emerald.900);
+  --theme-accent: theme(colors.emerald.800);
+  --theme-background: theme(colors.emerald.950);
+}
+
+.dark .purple-theme {
+  --theme-primary: theme(colors.violet.400);
+  --theme-secondary: theme(colors.violet.900);
+  --theme-accent: theme(colors.violet.800);
+  --theme-background: theme(colors.violet.950);
+}
+
+.dark .rose-theme {
+  --theme-primary: theme(colors.rose.400);
+  --theme-secondary: theme(colors.rose.900);
+  --theme-accent: theme(colors.rose.800);
+  --theme-background: theme(colors.rose.950);
+}
+
+.dark .orange-theme {
+  --theme-primary: theme(colors.orange.400);
+  --theme-secondary: theme(colors.orange.900);
+  --theme-accent: theme(colors.orange.800);
+  --theme-background: theme(colors.orange.950);
+}
+
+/* Font Classes */
+.font-rounded {
+  font-family: "SF Pro Rounded", ui-rounded, "Hiragino Maru Gothic ProN", system-ui, -apple-system, sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+}
+
+.dark .gradient-bg {
+  background: linear-gradient(to bottom right, #1a1b1e, #141517);
+}

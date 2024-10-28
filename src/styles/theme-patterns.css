@@ -1,0 +1,42 @@
+/* Theme Pattern Classes */
+.bg-dots {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: transparent;
+  opacity: 0.2;
+}
+
+.bg-lines {
+  background: repeating-linear-gradient(
+    45deg,
+    currentColor 0px,
+    currentColor 1px,
+    transparent 1px,
+    transparent 12px
+  );
+  opacity: 0.1;
+}
+
+.bg-waves {
+  background-image: 
+    linear-gradient(45deg, currentColor 25%, transparent 25%),
+    linear-gradient(-45deg, currentColor 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, currentColor 75%),
+    linear-gradient(-45deg, transparent 75%, currentColor 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  opacity: 0.1;
+}
+
+.bg-grid {
+  background-image: 
+    linear-gradient(currentColor 1px, transparent 1px),
+    linear-gradient(90deg, currentColor 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.1;
+}
+
+/* Font Classes */
+.font-rounded {
+  font-family: "SF Pro Rounded", ui-rounded, "Hiragino Maru Gothic ProN", system-ui, -apple-system, sans-serif;
+}

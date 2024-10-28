@@ -1,0 +1,33 @@
+/* Theme Gradient Classes */
+.bg-gradient-sunset {
+  background: linear-gradient(135deg, #ff6b6b, #feca57);
+}
+
+.bg-gradient-ocean {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.bg-gradient-forest {
+  background: linear-gradient(135deg, #48c6ef, #6f86d6);
+}
+
+.bg-gradient-candy {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* Dark mode variants */
+.dark .bg-gradient-sunset {
+  background: linear-gradient(135deg, #ff6b6b88, #feca5788);
+}
+
+.dark .bg-gradient-ocean {
+  background: linear-gradient(135deg, #4facfe88, #00f2fe88);
+}
+
+.dark .bg-gradient-forest {
+  background: linear-gradient(135deg, #48c6ef88, #6f86d688);
+}
+
+.dark .bg-gradient-candy {
+  background: linear-gradient(135deg, #ff758c88, #ff7eb388);
+}
